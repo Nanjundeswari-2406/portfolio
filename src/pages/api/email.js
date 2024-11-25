@@ -23,11 +23,14 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: email,
-      to: 'nanjujhansi@gmail.com', 
-      subject: `Message from ${name}`,
-      text: message,
-    });
+  from: email,
+  replyTo: email, 
+  to: 'nanjujhansi@gmail.com', 
+  subject: `Message from ${name}`,
+  text: message,
+  
+});
+
 
     return res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {

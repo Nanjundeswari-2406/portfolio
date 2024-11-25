@@ -48,33 +48,40 @@ const Contact = () => {
           </Link>
         </div>
 
-        <div className="space-y-4 p-4" data-aos="fade-right">
+        <div className="space-y-4 p-4  " data-aos="fade-right">
           <form onSubmit={onSubmit}>
             <div className="md:flex md:gap-4 md:space-y-0 space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="border-2 border-[#aaa] md:p-2 bg-[#efede6] md:w-full w-auto"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="border-2 border-[#aaa] md:p-2 bg-[#efede6] md:w-full w-auto"
-                value={formData.email}
-                onChange={handleChange}
-              />
+            <div className="flex-grow">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2bbcca] bg-[#efede6]"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex-grow">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2bbcca] bg-[#efede6]"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                </div>
             </div>
-            <textarea
-              name="message"
-              placeholder="Message"
-              className="border-2 border-[#aaa] md:p-2 bg-[#efede6] w-full h-[100px]"
-              value={formData.message}
-              onChange={handleChange}
-            />
+            <div className="mb-4 py-3">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2bbcca] h-[120px] bg-[#efede6]"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+
             <button
               type="submit"
               className="rounded-lg p-2 text-white bg-[#00c9ff] flex items-center justify-center mb-2 max-w-max"

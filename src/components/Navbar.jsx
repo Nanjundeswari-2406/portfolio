@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex justify-between items-center bg-[#efede6] px-4 md:px-5 py-2 md:fixed top-0 z-50 w-full md:h-16 ">
+      <div className="flex justify-between items-center bg-[#efede6] px-4 md:px-5 py-2 md:fixed top-0 z-50 w-full md:h-24 ">
         {/* Logo */}
         <div className="w-20 h-20 md:w-24 md:h-20 flex md:pt-6">
           <p className="text-5xl text-[#2bbcca]">Nanju</p>
